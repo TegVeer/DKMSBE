@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_items",
+  "info": {
+    "singularName": "inventory-item",
+    "pluralName": "inventory-items",
+    "displayName": "inventory item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item_name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "min_quantity": {
+      "type": "integer",
+      "required": true
+    },
+    "quantity_type": {
+      "type": "enumeration",
+      "enum": [
+        "kg",
+        "gm",
+        "box",
+        "bag"
+      ]
+    },
+    "last_update": {
+      "type": "datetime"
+    },
+    "update_by": {
+      "type": "string"
+    }
+  }
+}
