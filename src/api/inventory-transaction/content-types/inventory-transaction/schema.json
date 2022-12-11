@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_transactions",
+  "info": {
+    "singularName": "inventory-transaction",
+    "pluralName": "inventory-transactions",
+    "displayName": "Inventory Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "txn_by": {
+      "type": "string",
+      "required": true
+    },
+    "txn_data": {
+      "type": "json"
+    },
+    "txn_type": {
+      "type": "enumeration",
+      "enum": [
+        "In",
+        "Out"
+      ],
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "desc": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
